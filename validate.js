@@ -7,18 +7,17 @@ const seasonValidator = (value) => {
     return value === 'winter' || value === 'halloween' || value === 'summer'
 }
 
+const timeValidator = (value) => {
+    return /^([0-1][0-9]|2[0-3]):([0-5][0-9])$/.test(value);
+}
+
 const monthSchema = [
     {
         days: { type: String, required: true },
-        from: { type: String, required: true },
-        to: { type: String, required: true },
+        from: { type: String, required: true, use: { timeValidator } },
+        to: { type: String, required: true, use: { timeValidator } },
         event: { type: String, required: false },
-        season: {
-            type: String,
-            use: {
-                seasonValidator
-            }
-        },
+        season: { type: String, use: { seasonValidator } },
     }
 ];
 
