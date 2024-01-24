@@ -2,7 +2,7 @@ park: 'mp-id'
 year: 2024
 months:
   january: ~
-  febru
+  february: ~
   march:
     - { days: '1-30', from: '10:00', to: '18:00'}
   april:
