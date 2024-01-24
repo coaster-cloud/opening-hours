@@ -3,13 +3,22 @@ import validateSchema from 'yaml-schema-validator';
 
 const files = await glob("./data/**/*.yaml");
 
+const seasonValidator = (value) => {
+    return value === 'winter' || value === 'halloween' || value === 'summer'
+}
+
 const monthSchema = [
     {
         days: { type: String, required: true },
         from: { type: String, required: true },
         to: { type: String, required: true },
         event: { type: String, required: false },
-        season: { type: String, required: false },
+        season: {
+            type: String,
+            use: {
+                seasonValidator
+            }
+        },
     }
 ];
 
