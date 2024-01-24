@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "glob": "^10.3.10",
+    "yaml": "^2.3.4"
+  }
+}

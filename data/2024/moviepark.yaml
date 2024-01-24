@@ -1,0 +1,20 @@
+park: 'mp-id'
+year: 2024
+months:
+  january: ~
+  febru
+  march:
+    - { days: '1-30', from: '10:00', to: '18:00'}
+  april:
+    - { days: '1,2,5,10', from: '10:00', to: '18:00'}
+    - { days: '2,5,6-9,11-31', from: '10:00', to: '20:00', event: 'Halloween Special', season: halloween}
+  may: ~
+  june: ~
+  july: ~
+  august: ~
+  september: ~
+  october: ~
+  november: ~
+  december:
+    - { days: '1,2,5,10', from: '10:00', to: '18:00' }
+    - { days: '2,5,6-9,11-31', from: '10:00', to: '20:00', season: winter }
